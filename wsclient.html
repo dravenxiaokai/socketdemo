@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>wsclient</title>
+</head>
+<body>
+  <h1>WebSocket</h1>   
+  <div id="chatroom" style="width:400px;height:300px;overflow: auto;border:1px solid blue"></div>
+  <form name="myform">
+    <input type="text" name="sayinput">
+    <input type="button" value="say" onclick="say()">
+  </form>
+  <script src="WsClient.js"></script>
+  <script>
+    function say(){
+      ws.send(myform.sayinput.value)
+    }
+  </script>
+</body>
+</html>
